@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e12135fa-3ebf-42cb-afcb-a8cae2b856e0" name="默认更改列表" comment="">
-      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" />
+    <list default="true" id="e12135fa-3ebf-42cb-afcb-a8cae2b856e0" name="默认更改列表" comment="初始化">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,12 +71,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化" />
   </component>
   <component name="WindowStateProjectService">
     <state x="793" y="404" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593673259925">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="793" y="404" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1200@0.0.1920.1200" timestamp="1593673259925" />
+    <state x="560" y="340" key="Vcs.Push.Dialog.v2" timestamp="1593676610649">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="560" y="340" key="Vcs.Push.Dialog.v2/0.0.1920.1200@0.0.1920.1200" timestamp="1593676610649" />
     <state x="100" y="100" width="1720" height="1000" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1593674283873">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>

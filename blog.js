@@ -1,7 +1,7 @@
 $.awesCnb({
     //主题
     theme: {
-        name: 'reacg',
+        name: 'simple',
         color: '#409EFF',
         title: '刘铭的博客',
         avatar: 'http://img5.imgtn.bdimg.com/it/u=3103931304,1835423043&fm=26&gp=0.jpg',
