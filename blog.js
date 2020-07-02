@@ -1,252 +1,169 @@
-/**
- * Minified by jsDelivr using Terser v3.14.1.
- * Original file: /gh/BNDong/Cnblogs-Theme-SimpleMemory@1.3.1/src/script/simpleMemory.js
- *
- * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
- */
-if (initCheck()) {
-	var sidebarHtml =
-		'<div class="container">    <div class="menu-wrap optiscroll" id="menuWrap" style="display:none">        <nav class="menu">            \x3c!-- 个人简介 --\x3e            <div class="introduce-box">                <div class="introduce-head">                    <div class="introduce-via" id="menuBlogAvatar"></div>                </div>                <div id="introduce"></div>            </div>            \x3c!-- 导航 --\x3e            <div class="nav-title"></div>            <div class="icon-list">                <ul id="m-nav-list">                </ul>            </div>            \x3c!-- 日历 --\x3e            <span id="calendar-box"></span>            \x3c!-- 找找看 --\x3e            <div class="m-list-title"><span>找找看</span></div>            <div class="m-icon-list" id="sb-sidebarSearchBox"></div>            \x3c!-- 积分与排名 --\x3e            <div class="m-list-title"><span>积分排名<span class="iconfont icon-select m-list-title-select"></span></span></div>            <div class="m-icon-list" id="sb-sidebarScorerank"></div>            \x3c!-- 最新随笔 --\x3e            <div class="m-list-title"><span>最新随笔<span class="iconfont icon-select m-list-title-select"></span></span></div>            <div class="m-icon-list" id="sb-sidebarRecentposts"></div>            \x3c!-- 我的标签 --\x3e            <div class="m-list-title"><span>我的标签<span class="iconfont icon-select m-list-title-select"></span></span></div>            <div class="m-icon-list" id="sb-toptags"></div>            \x3c!-- 随笔分类 --\x3e            <div class="m-list-title"><span>随笔分类<span class="iconfont icon-select m-list-title-select"></span></span></div>            <div class="m-icon-list" id="sb-classify"></div>            \x3c!-- 文章分类 --\x3e            <div class="m-list-title"><span>文章分类<span class="iconfont icon-select m-list-title-select"></span></span></div>            <div class="m-icon-list" id="sb-ArticleCategory"></div>            \x3c!-- 阅读排行 --\x3e            <div class="m-list-title"><span>阅读排行<span class="iconfont icon-select m-list-title-select"></span></span></div>            <div class="m-icon-list" id="sb-topview"></div>            \x3c!-- 推荐排行 --\x3e            <div class="m-list-title"><span>推荐排行<span class="iconfont icon-select m-list-title-select"></span></span></div>            <div class="m-icon-list" id="sb-topDiggPosts"></div>            \x3c!-- 最新评论 --\x3e            <div class="m-list-title"><span>最新评论<span class="iconfont icon-select m-list-title-select"></span></span></div>            <div class="m-icon-list" id="sb-recentComments"></div>            \x3c!-- 文章档案 --\x3e            <div class="m-list-title"><span>文章档案<span class="iconfont icon-select m-list-title-select"></span></span></div>            <div class="m-icon-list" id="sb-articlearchive"></div>            \x3c!-- 随笔档案 --\x3e            <div class="m-list-title"><span>随笔档案<span class="iconfont icon-select m-list-title-select"></span></span></div>            <div class="m-icon-list" id="sb-record"></div>            \x3c!-- 自定义列表 --\x3e            <span id="menuCustomList"></span>        </nav>        <button class="close-button" id="close-button">Close Menu</button>        <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">                <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>            </svg>        </div>    </div>    <button class="menu-button" id="open-button">MENU</button>    <div class="content-wrap" id="content-wrap"></div>\x3c!-- /content-wrap --\x3e</div><div class="main-header">    <canvas id="notHomeTopCanvas"></canvas>    <div class="vertical">        <div class="main-header-content inner">            <h1 class="page-title" id="homeTopTitle"></h1>            <h2 class="page-description" id="hitokoto"></h2>            <h3 class="page-author" id="hitokotoAuthor"></h3>            <h1 class="sb-title" id="sbTitle"></h1>            <p class="article-info" id="articleInfo"></p>        </div>    </div>    <a class="scroll-down" href="javascript:void(0);" data-offset="-45">        <span class="hidden">Scroll Down</span>        <i class="scroll-down-icon iconfont icon-fanhui"></i>    </a></div><div id="loading"></div><div id="bottomProgressBar"></div><div id="rightMenu"></div>';
-	window.cnblogsConfigDefault = {
-		GhUserName: "BNDong",
-		GhRepositories: "Cnblogs-Theme-SimpleMemory",
-		GhVersions: "v1.3.0",
-		CnVersions: "",
-		blogUser: "",
-		blogAvatar: "",
-		blogStartDate: "2019-01-01",
-		menuCustomList: {},
-		menuNavList: [],
-		menuUserInfoBgImg: "",
-		webpageTitleOnblur: "(oﾟvﾟ)ノ Hi",
-		webpageTitleOnblurTimeOut: 500,
-		webpageTitleFocus: "(*´∇｀*) 欢迎回来！",
-		webpageTitleFocusTimeOut: 1e3,
-		webpageIcon: "",
-		fontIconExtend: "",
-		progressBar: {
-			id: "top-progress-bar",
-			color: "#77b6ff",
-			height: "2px",
-			duration: .2
-		},
-		loading: {
-			rebound: {
-				tension: 16,
-				friction: 5
-			},
-			spinner: {
-				id: "spinner",
-				radius: 90,
-				sides: 3,
-				depth: 4,
-				colors: {
-					background: "#f0f0f0",
-					stroke: "#272633",
-					base: null,
-					child: "#272633"
-				},
-				alwaysForward: !0,
-				restAt: .5,
-				renderBase: !1
-			}
-		},
-		homeTopAnimationRendered: !0,
-		homeTopAnimation: {
-			radius: 15,
-			density: .2,
-			color: "rgba(255,255,255, .2)",
-			clearOffset: .3
-		},
-		essayTopAnimationRendered: !0,
-		essayTopAnimation: {
-			triW: 14,
-			triH: 20,
-			neighbours: ["side", "top", "bottom"],
-			speedTrailAppear: .1,
-			speedTrailDisappear: .1,
-			speedTriOpen: 1,
-			trailMaxLength: 30,
-			trailIntervalCreation: 100,
-			delayBeforeDisappear: 2,
-			colorsRandom: !1,
-			colors: ["#96EDA6", "#5BC6A9", "#38668C", "#374D84", "#BED5CB", "#62ADC6", "#8EE5DE", "#304E7B"]
-		},
-		bgAnimationRendered: !0,
-		backgroundAnimation: {
-			colorSaturation: "60%",
-			colorBrightness: "50%",
-			colorAlpha: .5,
-			colorCycleSpeed: 5,
-			verticalPosition: "random",
-			horizontalSpeed: 200,
-			ribbonCount: 3,
-			strokeSize: 0,
-			parallaxAmount: -.2,
-			animateSections: !0
-		},
-		homeTopImg: ["https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/home_top_bg.webp"],
-		homeBannerText: "",
-		homeBannerTextType: "jinrishici",
-		essayTopImg: ["https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/nothome_top_bg.webp"],
-		essayCodeHighlightingType: "cnblogs",
-		essayCodeHighlighting: "",
-		essayCode: {
-			fontFamily: "'Ubuntu Mono',monospace",
-			fontSize: "14px"
-		},
-		codeMaxHeight: !1,
-		codeLineNumber: !1,
-		essaySuffix: {
-			codeImgUrl: "",
-			aboutHtml: "",
-			copyrightHtml: "",
-			supportHtml: ""
-		},
-		bottomBlogroll: [],
-		bottomText: {
-			iconFont: {
-				icon: "icon-xl",
-				color: "red",
-				fontSize: "16px"
-			},
-			left: "",
-			right: ""
-		},
-		footerStyle: 2,
-		consoleList: [],
-		bookList: [],
-		themeAuthor: !1,
-		isVersionMapping: !1,
-		switchDayNight: {
-			enable: !0,
-			auto: {
-				enable: !1,
-				dayHour: 5,
-				nightHour: 19
-			}
-		},
-		reward: {
-			enable: !1,
-			wechatpay: "",
-			alipay: ""
-		},
-		advertising: !0
-	}, window.cnblogsConfigDefault.hook = {
-		beforeLoading: function(i) {},
-		afterLoading: function(i, e) {},
-		pageLabelChanges: function(i, e) {},
-		beforeCodeHighlighting: function(i) {},
-		afterCodeHighlighting: function(i) {},
-		dayNightControl: function(i, e) {},
-		pageInitEnd: function(i) {}
-	}, window.cnblogsConfig = $.extend(!0, window.cnblogsConfigDefault, window.cnblogsConfig), getVersionConfig()
-} else $('a[name="top"]').text("SimpleMemory：基础配置有误，请阅读文档，检查配置！").css({
-	display: "block",
-	"text-align": "center",
-	"padding-top": "45vh",
-	"font-size": "20px",
-	color: "#333"
+$.awesCnb({
+    //主题
+    theme: {
+        name: 'reacg',
+        color: '#409EFF',
+        title: '刘铭的博客',
+        avatar: 'http://img5.imgtn.bdimg.com/it/u=3103931304,1835423043&fm=26&gp=0.jpg',
+        headerBackground: 'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
+        contentSize: 'max'
+    },
+    // 照片
+    imagebox: {
+        enable: true,
+    },
+    // 暗黑模式
+    darkMode: {
+        enable: true,
+        autoDark: false,
+        autoLight: false
+    },
+    //签名
+    signature: {
+        enable: false,
+        contents: [
+            '所爱隔山海，山海不可平',
+            '海上月是天上月，眼前人是心上人'
+        ],
+    },
+    //二维码
+    qrcode: {
+        enable: true,
+        img: '',
+        desc: '微信号',
+    },
+    //背景
+    bodyBackground: {
+        enable: false,
+        type: 'img', //'color' 'img'
+        value: 'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
+        opacity: 1,
+        repeat: false,
+    },
+    //首页列表图片
+    indexListImg: {
+        enable: true,
+        imgs: [],
+    },
+    //文章头图
+    postTopimage: {
+        enable: true,
+        imgs: [],
+    },
+    //文章尾图
+    postBottomimage: {
+        enable: false,
+        img: '',
+        height: ''
+    },
+    //同志
+    notice: {
+        enable: true,
+        text: ['🔯双击导航条锁屏', '🙃快去自定义通知吧'],
+    },
+    //锁屏
+    lock: {
+        enable: true,
+        background: '',
+        strings: [
+            '<i>Powered by</i> webpack.',
+            '&amp; Theme in awescnb',
+            '快去自定义你的个性签名吧~',
+        ],
+    },
+    //模型
+    live2d: {
+        enable: true,
+        page: 'all',
+        agent: 'pc',
+        model: 'haru-01',
+        width: 150,
+        height: 200,
+        position: 'left',
+        gap: 'default', // 边距
+    },
+    //点击特效
+    click: {
+        enable: true,
+        auto: false,
+        colors: ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'],
+        size: 30,
+        maxCount: 50,
+    },
+    //头部进度条
+    topProgress: {
+        enable: false,
+        page: 'all',
+        agent: 'pc',
+        background: '#409EFF',
+        height: '5px',
+    },
+    // GitHub
+    github: {
+        enable: true,
+        color: '#ffb3cc',
+        url: 'https://github.com/liumingdepot',
+    },
+    gitee: {
+        enable: true,
+        color: '#C71D23',
+        url: 'https://gitee.com/www_liuming',
+    },
+    //代码高亮
+    highLight: {
+        type: 'atomOneDark',
+    },
+    lineNumbers: {
+        enable: true,
+    },
+    //文章目录
+    catalog: {
+        enable: true,
+        position: 'left',
+    },
+    //返回顶部
+    back2top: {
+        enable: true,
+        type: 'complex',
+    },
+    //按钮工具
+    tools: {
+        enable: true,
+        initialOpen: true,
+        draggable: false,
+    },
+    // 打赏
+    donation: {
+        enable: true,
+        qrcodes: [],
+    },
+    //弹幕
+    barrage: {
+        enable: true,
+        opacity: 0.6,
+        colors: [
+            '#FE0302',
+            '#FF7204',
+            '#FFAA02',
+            '#FFD302',
+            '#FFFF00',
+            '#A0EE00',
+            '#00CD00',
+            '#019899',
+            '#4266BE',
+            '#89D5FF',
+            '#CC0273',
+            '#CC0273',
+        ],
+        barrages: [],//全局弹幕
+        indexBarrages: [],//首页弹幕
+        postPageBarrages: [],//随笔页弹幕
+    },
+    //底部链接
+    links: [
+        {
+            name: 'awescnb',
+            link: 'https://gitee.com/guangzan/awescnb',
+        },
+    ],
 });
-
-function initCheck() {
-	var i = $("#mobile-style").attr("href");
-	if (void 0 !== i) {
-		var e = i.split("/");
-		if (-1 !== $.inArray("SimpleMemory", e)) return !0
-	}
-	return !1
-}
-
-function getVersionConfig() {
-	if (window.cnblogsConfig.CnVersions = window.cnblogsConfig.GhVersions, window.cnblogsConfig.isVersionMapping) {
-		var i = "https://raw.githubusercontent.com/" + window.cnblogsConfig.GhUserName + "/" + window.cnblogsConfig.GhRepositories +
-			"/master/version.conf";
-		$.ajax({
-			type: "get",
-			url: i,
-			dataType: "text",
-			async: !1,
-			success: function(i) {
-				window.themeVersion = !!i && JSON.parse(i), window.themeVersion && e()
-			}
-		})
-	} else "BNDong" === window.cnblogsConfig.GhUserName ? (window.themeVersion = [
-		["v1.1.6", "d8adfb50252062f658350bda29d7145f5eff0b80"],
-		["v1.1.8", "461aab69de17a84f0af9ff0c326bfcb94438b06c"],
-		["v1.2.2", "08eab99303d7c463a495adabd8feccc784a8507d"],
-		["v1.2.3", "36901bf16e2aa3656d4e6f78d44486273b0b8972"],
-		["v1.2.4", "9354db2147c11fc56cfe02a502f1f8229332fc2f"],
-		["v1.2.5", "4d744f980758500078df349520472e3b360fb841"]
-	], e()) : init();
-
-	function e() {
-		var i = function i(e) {
-			var s = "";
-			window.themeVersion && $.each(window.themeVersion, function(i) {
-				if (window.themeVersion[i][0] === e) return s = window.themeVersion[i][1], !1
-			});
-			return "" === s ? e : i(s)
-		}(window.cnblogsConfig.GhVersions);
-		i && (window.cnblogsConfig.GhVersions = i), init()
-	}
-}
-
-function init() {
-	console.log(window.location.href);
-	var i = window.location.href.split("/")[3],
-		e = '<li><a href="https://www.cnblogs.com/' + i +
-		'/" target="_self">首页</a></li><li><a href="https://msg.cnblogs.com/send/' + i +
-		'" target="_blank">联系</a></li><li><a href="https://www.cnblogs.com/' + i +
-		'/rss" target="_blank">订阅</a></li><li><a href="https://i.cnblogs.com/" target="_blank">管理</a></li>',
-		s = window.cnblogsConfig.menuNavList;
-	s.length > 0 && $.each(s, function(i) {
-		e += '<li><a href="' + s[i][1] + '" target="_blank">' + s[i][0] + "</a></li>"
-	}), $("#blog-news").prepend(sidebarHtml), $("#m-nav-list").append(e), "" === window.cnblogsConfig.blogUser && (window
-		.cnblogsConfig.blogUser = i), $.ajaxSetup({
-		cache: !0
-	}), $.getScript(getJsDelivrUrl("loading.js"), function() {
-		window.cnblogsConfig.hook.beforeLoading(pageLoading), pageLoading.initRebound(), pageLoading.initSpinner(),
-			pageLoading.spinner.init(pageLoading.spring, !0), $.getScript(getJsDelivrUrl("jquery.mCustomScrollbar.min.js"),
-				function() {
-					$.getScript(getJsDelivrUrl("require.min.js"), function() {
-						$.getScript(getJsDelivrUrl("config.js"), function() {
-							require(["optiscroll_ToProgress_rotate", "snapSvg", "classie", "main4", "tools"], function() {
-								require(["base"], function() {
-									(new Base).init()
-								})
-							})
-						})
-					})
-				})
-	})
-}
-
-function getJsDelivrUrl(i, e) {
-	return i = setFileNameMin(i, e), "https://cdn.jsdelivr.net/gh/" + window.cnblogsConfig.GhUserName + "/" + window.cnblogsConfig
-		.GhRepositories + "@" + window.cnblogsConfig.GhVersions + "/" + (i || "")
-}
-
-function setFileNameMin(i, e) {
-	if (void 0 === i) return "";
-	var s = null,
-		n = i.split(".");
-	if (n.length > 0 && -1 !== $.inArray(n[n.length - 1], ["js", "css"])) switch (s = n.pop()) {
-		case "js":
-			e = "script";
-			break;
-		case "css":
-			e = "style"
-	} else {
-		if (void 0 === e) return "";
-		switch (e) {
-			case "js":
-				e = "script";
-				break;
-			case "css":
-				e = "style"
-		}
-	}
-	return -1 === i.search(".min") && n.push("min"), null != s && n.push(s), void 0 !== e ? "src/" + e + "/" + n.join(".") :
-		n.join(".")
-}
